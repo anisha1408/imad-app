@@ -1,7 +1,11 @@
-console.log('Loaded!');
-var element=document.getElementById('main-text');
-element.innerHTML='new value';
-var img=document.getElementById('nadi');
-img.onClick= function(){
-  img.style.marginLeft='100px';  
+var button= document.ElementById('counter');
+var counter=0;
+button.onClick=function(){
+    
 };
+
+
+
+counter=counter+1;
+var span=document.getElementById('count');
+span.innherHTML= counter.toString();
