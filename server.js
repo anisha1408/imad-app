@@ -8,8 +8,8 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var counter=0;
-app.get('/counter', function(req,res){
+//var counter=0;
+/*app.get('/counter', function(req,res){
    counter=counter+1;
    res.send(counter.toString());
 });
@@ -25,16 +25,21 @@ app.get('/article-two', function (req, res) {
 app.get('/article-three', function (req, res) {
      res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/nadi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'nadi.png'));
 });
-app.get('/ui/main.js',function (req, res){
+/*app.get('/ui/main.js',function (req, res){
     res.sendFile(path.join(_dirname,'ui', 'main.js'));
+});*/
+var port=8080;
+app.listen(8080,function(){
+    console.log(`hello listening on ${port}`);
 });
 
 
